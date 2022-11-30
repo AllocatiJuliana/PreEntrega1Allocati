@@ -7,7 +7,7 @@ function validarMail() {
 
     let validarCorreo = prompt("Ingrese su Correo")
     if (validarCorreo != usuarioCorreo) {
-        alert("Mail Incorrecto")
+        alert("Correo Incorrecto")
         return validarMail()
     }
 }
@@ -27,6 +27,26 @@ function validarContrasenia() {
 }
 validarContrasenia()
 
+
+let usuarioMail = prompt("Ingrese su Correo");
+
+const login = (usuarioMail) => {
+
+    let arroba = false
+
+    for (let i = 0; i < usuarioMail.length; i++) {
+        if (usuarioMail[i] === "@") {
+            arroba = true;
+        } else {
+            arroba != true;
+            alert("Su correo es incorrecto!!");
+            let usuarioNuevoMail = prompt("Ingrese un correo valido: ");
+            break;
+        }
+    } return arroba;
+}
+
+login(usuarioMail);
 
 
 
